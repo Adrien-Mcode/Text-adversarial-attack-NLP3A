@@ -4,7 +4,7 @@ This work is the result of our ENSAE 3rd year NLP project. We chose the subject 
 
 # Data
 
-Our dataset is the dataset developed by the authors of the paper. It is called "bert-base-uncased-imdb_bae.csv".
+Our dataset is the dataset developed by the authors of the paper. It is called "bert-base-uncased-imdb_bae.csv". You can find it here https://drive.google.com/drive/folders/1njfSzIDYtAc1xL_mAWix_MnHO2fpkBRs?usp=sharing as it is too big to upload in our repository. There are also the datasets of the other attacks.
 
 # Robust density estimation 
 
