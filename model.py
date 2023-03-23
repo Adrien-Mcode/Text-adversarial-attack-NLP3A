@@ -15,30 +15,33 @@ Original file is located at
 
 
 #packages importation
-!pip install matplotlib
-!pip install numpy
-!pip install sklearn
-!pip install scipy
-!pip install tensorflow
-!pip install pandas
-!pip install datasets
-!pip install evaluate
-!pip install scienceplots
+# !pip install matplotlib
+# !pip install numpy
+# !pip install sklearn
+# !pip install scipy
+# !pip install tensorflow
+# !pip install pandas
+# !pip install datasets
+# !pip install evaluate
+# !pip install scienceplots
 
 #general 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import torch
+import sklearn
 
 #for models
 import tensorflow as tf
-!pip install transformers
+# !pip install transformers
 import transformers as tr
 import datasets as dt
-!pip install sentence_transformers
+# !pip install sentence_transformers
 import sklearn.covariance as Covariance
 import sklearn.decomposition as Decomposition
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, roc_auc_score, roc_curve, RocCurveDisplay
 from sentence_transformers import SentenceTransformer
 from scipy.stats import multivariate_normal
 from scipy.linalg import sqrtm
@@ -48,7 +51,7 @@ import evaluate as ev
 
 #model
 def full_model_evaluation(dataset, text_col, label_col) :
-    text_train, text_test, label_train, label_test = sklearn.model_selection.train_test_split(dataset[text_col], dataset[label_col], test_size=0.33, random_state=42)
+    text_train, text_test, label_train, label_test = train_test_split(dataset[text_col], dataset[label_col], test_size=0.33, random_state=42)
 
 def get_dataset(dataset_name, model, attack_name):
     filename = model + '-' + dataset_name + "_" + attack_name + ".csv"
